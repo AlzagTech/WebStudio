@@ -1,0 +1,25 @@
+body {
+  background-color: getColor ('primary-white');
+  color: getColor ('primary-text');
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+button {
+  font-family: inherit;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}

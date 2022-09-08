@@ -1,0 +1,34 @@
+.social-list {
+  @extend %list;
+  display: flex;
+  align-items: center;
+}
+
+.social-list__item {
+  width: 44px;
+  height: 44px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-list__link {
+  @extend %link;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  fill: getColor('primary-icon');
+
+  transition: fill 250ms $timing-function, background-color 250ms $timing-function;
+
+  &:hover,
+  &:hover {
+    background-color: getColor('accent');
+    fill: getColor('primary-white');
+  }
+}

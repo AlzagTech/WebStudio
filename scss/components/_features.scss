@@ -1,0 +1,42 @@
+.features {
+  @extend %section;
+}
+
+.features__container {
+  @extend %container;
+}
+
+.features__hidden-title {
+  @extend %visually-hidden;
+}
+
+.features__list {
+  @extend %list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+.features__title {
+  margin-bottom: 10px;
+
+  color: getColor('title-text');
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features__pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: getColor('button-bg');
+  border-radius: 4px;
+}

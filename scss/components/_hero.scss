@@ -1,0 +1,254 @@
+.hero {
+  padding: 200px 0;
+  text-align: center;
+
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(
+      to right,
+      getColor('overlay-gradient'),
+      getColor('overlay-gradient')
+    ),
+    url(../images/hero-bg.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__container {
+  @extend %container;
+}
+
+.hero__title {
+  width: 694px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  color: getColor('primary-white');
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hero__btn {
+  padding: 10px 32px;
+  border: none;
+
+  background-color: getColor('accent');
+  color: getColor('primary-white');
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  transition: background-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: getColor('hero-btn-hover');
+  }
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: getColor('backdrop-bg');
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  opacity: 1;
+  transition: opacity 250ms $timing-function;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: getColor('primary-white');
+
+  transform: translate(-50%, -50%);
+}
+
+.modal__btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  background-color: getColor('primary-white');
+}
+
+.modal__icon {
+  fill: getColor('black');
+  transition: fill 250ms $timing-function;
+
+  .modal__btn:hover &,
+  .modal__btn:focus & {
+    fill: getColor('accent');
+  }
+}
+
+.form-title {
+  margin-bottom: 12px;
+}
+
+.form-title__text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15px;
+
+  color: getColor('title-text');
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 4px;
+  text-align: start;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: getColor('primary-text');
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+
+  transition: outline 250ms $timing-function;
+
+  &:focus {
+    outline: 1px solid getColor('accent');
+  }
+}
+
+.form__textarea {
+  display: block;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+
+  transition: outline 250ms $timing-function;
+
+  &:focus {
+    outline: 1px solid getColor('accent');
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 29px;
+  right: 418px;
+  transition: fill 250ms $timing-function;
+
+  .form__field:focus-within & {
+    fill: getColor('accent');
+  }
+}
+
+.checkbox {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.checkbox__input {
+  appearance: none;
+}
+
+.checkbox__text {
+  line-height: 1.71;
+  color: getColor('primary-text');
+  margin-right: 8px;
+}
+
+.checkbox__custom {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+
+  border: 2px solid getColor('black');
+  border-radius: 2px;
+  height: 15px;
+  width: 16px;
+  fill: none;
+
+  .checkbox__input:checked + & {
+    border: none;
+    fill: getColor('accent');
+  }
+}
+
+.checkbox__link {
+  line-height: 1.71;
+  color: getColor('accent');
+}
+
+.modal-form__btn {
+  min-height: 50px;
+  padding: 10px 52px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88px;
+  letter-spacing: 0.06em;
+
+  color: getColor('primary-white');
+  background: getColor('accent');
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  transition: background-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: getColor('hero-btn-hover');
+  }
+}

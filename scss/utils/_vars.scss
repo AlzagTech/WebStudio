@@ -1,0 +1,32 @@
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$main-font: Roboto, sans-serif;
+$second-font: Raleway, sans-serif;
+
+$colors: (
+  'primary-text': #757575,
+  'title-text': #212121,
+
+  'primary-white': #ffffff,
+  'black': #000000,
+
+  'secondary-bg': #2f303a,
+  'tertiary-bg': #f5f4fa,
+  'accent': #2196f3,
+  'button-bg': #f5f4fa,
+
+  'contacts-link': rgba(255, 255, 255, 0.6),
+  'hero-btn-hover': #188ce8,
+
+  'hero-bg-reserve': #c4c4c4,
+  'overlay-gradient': rgba(47, 48, 58, 0.4),
+  'backdrop-bg': rgba(0, 0, 0, 0.2),
+  'primary-icon': #afb1b8,
+  'secondary-icon-bg': rgba(255, 255, 255, 0.1),
+  'header-border': #ececec,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+// color: getColor('primary');

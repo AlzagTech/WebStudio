@@ -1,0 +1,38 @@
+.clients {
+  @extend %section;
+}
+
+.clients__container {
+  @extend %container;
+}
+
+.clients__title {
+  @extend %section-title;
+}
+
+.clients__list {
+  @extend %list;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clients__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid getColor('primary-icon');
+  border-radius: 4px;
+
+  fill: getColor('primary-icon');
+  transition: border 250ms var(--timing-function), fill 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    fill: getColor('accent');
+    border-color: getColor('accent');
+  }
+}

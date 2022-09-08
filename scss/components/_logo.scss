@@ -1,0 +1,13 @@
+.logo {
+  @extend %link;
+  font-family: $second-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+
+  color: getColor('black');
+}
+
+.logo__part {
+  color: getColor('accent');
+}

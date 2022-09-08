@@ -1,0 +1,51 @@
+%container {
+  padding: 0 15px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+%section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+%list {
+  list-style: none;
+  padding-left: 0;
+}
+
+%link {
+  text-decoration: none;
+}
+
+%img {
+  display: block;
+}
+
+%input {
+  margin: 0;
+  padding: 0;
+}
+
+%visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+%section-title {
+  margin-bottom: 50px;
+
+  color: getColor('title-text');
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}

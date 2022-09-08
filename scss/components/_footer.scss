@@ -1,0 +1,143 @@
+.footer {
+  background-color: getColor('secondary-bg');
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  @extend %container;
+  display: flex;
+  align-items: baseline;
+}
+
+.adress-block {
+  margin-right: 94px;
+}
+
+.footer_logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: getColor('primary-white');
+}
+
+.adress__list {
+  @extend %list;
+}
+
+.adress__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.adress__link {
+  @extend %link;
+  display: inline-block;
+
+  color: getColor('contacts-link');
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration: none;
+
+  transition: color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
+
+.adress__link--first {
+  color: getColor('primary-white');
+}
+
+.social-block__label {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: getColor('primary-white');
+}
+
+.footer__social-list {
+  .social-list__link {
+    background-color: getColor('secondary-icon-bg');
+    fill: getColor('primary-white');
+  }
+
+  .social-list__link:hover,
+  .social-list__link:focus {
+    background-color: getColor('accent');
+    fill: getColor('primary-white');
+  }
+}
+
+.subscription-block {
+  margin-left: auto;
+}
+
+.subscription-block__label {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: getColor('primary-white');
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-form__input {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 15px;
+  width: 358px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: getColor('secondary-bg');
+  color: getColor('primary-white');
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer-form__btn {
+  position: relative;
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 62px;
+
+  color: getColor('primary-white');
+  background: getColor('accent');
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+}
+
+.footer-form__icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: getColor('primary-white');
+}
