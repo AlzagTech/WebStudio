@@ -1,6 +1,6 @@
 body {
-  background-color: getColor ('primary-white');
-  color: getColor ('primary-text');
+  background-color: getColor('primary-white');
+  color: getColor('primary-text');
   font-family: $main-font;
   font-size: 14px;
   line-height: 1.71;
@@ -22,4 +22,10 @@ p,
 ul {
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

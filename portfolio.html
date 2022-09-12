@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-07</title>
+    <title>WebStudio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -19,10 +19,20 @@
     <!-- Шапка сайту -->
     <header class="page-header">
       <div class="page-header__container">
+        <a href="./index.html" class="logo page-header__logo" lang="en"
+          ><span class="logo__part">Web</span>Studio
+        </a>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40">
+            <use class="icon-cross" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
         <nav class="site-nav">
-          <a href="./index.html" class="logo page-header__logo" lang="en"
-            ><span class="logo__part">Web</span>Studio</a
-          >
           <ul class="site-nav__list">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link">Студія</a>
@@ -83,8 +93,6 @@
                   <img
                     src="./images/project1.jpg"
                     alt="Ноутбук з зображенням веб-сторінки"
-                    width="370"
-                    height="294"
                     class="projects__pic"
                   />
                   <div class="projects__overlay">
@@ -107,8 +115,6 @@
                   <img
                     src="./images/project2.jpg"
                     alt="Два баскетболіста, які змагаються за м'яч"
-                    width="370"
-                    height="294"
                     class="projects__pic"
                   />
                   <div class="projects__overlay">
@@ -133,8 +139,6 @@
                   <img
                     src="./images/project3.jpg"
                     alt="Логотип з написом на фоні рибини"
-                    width="370"
-                    height="294"
                     class="projects__pic"
                   />
                   <div class="projects__overlay">
@@ -154,13 +158,7 @@
             <li class="projects__item">
               <a href="mailto:info@devstudio.com" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/project4.jpg"
-                    alt="Навушники"
-                    width="370"
-                    height="294"
-                    class="projects__pic"
-                  />
+                  <img src="./images/project4.jpg" alt="Навушники" class="projects__pic" />
                   <div class="projects__overlay">
                     <p class="projects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -181,8 +179,6 @@
                   <img
                     src="./images/project5.jpg"
                     alt="Дві картонні коробки"
-                    width="370"
-                    height="294"
                     class="projects__pic"
                   />
                   <div class="projects__overlay">
@@ -205,8 +201,6 @@
                   <img
                     src="./images/project6.jpg"
                     alt="Веб-сайт на моніторі комп'ютера"
-                    width="370"
-                    height="294"
                     class="projects__pic"
                   />
                   <div class="projects__overlay">
@@ -226,13 +220,7 @@
             <li class="projects__item">
               <a href="mailto:info@devstudio.com" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/project7.jpg"
-                    alt="Відкрита книга"
-                    width="370"
-                    height="294"
-                    class="projects__pic"
-                  />
+                  <img src="./images/project7.jpg" alt="Відкрита книга" class="projects__pic" />
                   <div class="projects__overlay">
                     <p class="projects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -250,13 +238,7 @@
             <li class="projects__item">
               <a href="mailto:info@devstudio.com" class="projects__link">
                 <div class="projects__thumb">
-                  <img
-                    src="./images/project8.jpg"
-                    alt="Бірка з логотипом"
-                    width="370"
-                    height="294"
-                    class="projects__pic"
-                  />
+                  <img src="./images/project8.jpg" alt="Бірка з логотипом" class="projects__pic" />
                   <div class="projects__overlay">
                     <p class="projects__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -277,8 +259,6 @@
                   <img
                     src="./images/project9.jpg"
                     alt="Ноутбук з зображенням веб-сторінки"
-                    width="370"
-                    height="294 "
                     class="projects__pic"
                   />
                   <div class="projects__overlay">
@@ -392,5 +372,73 @@
         </div>
       </div>
     </footer>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+          <use class="icon-cross" href="./images/icons.svg#icon-close-mobile"></use>
+        </svg>
+      </button>
+      <nav class="menu-nav">
+        <ul class="menu-nav__list">
+          <li class="menu-nav__item">
+            <a href="./index.html" class="menu-nav__link">Студія</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="./portfolio.html" class="menu-nav__link menu-nav__link--active">Портфоліо</a>
+          </li>
+          <li class="menu-nav__item"><a href="" class="menu-nav__link">Контакти</a></li>
+        </ul>
+      </nav>
+      <div class="menu-container__box">
+        <ul class="menu-contacts">
+          <li class="menu-contacts__item">
+            <a href="tel:+380961111111" class="menu-contacts__tel"> +38 096 111 11 11</a>
+          </li>
+          <li class="menu-contacts__item">
+            <a href="mailto:info@devstudio.com" class="menu-contacts__email"> info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="menu-social">
+          <li class="menu-social__item">
+            <a
+              href="https://www.instagram.com/"
+              class="menu-social__link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Instagram
+            </a>
+          </li>
+          <li class="menu-social__item">
+            <a
+              href="https://twitter.com/"
+              class="menu-social__link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Twitter
+            </a>
+          </li>
+          <li class="menu-social__item">
+            <a
+              href="https://www.facebook.com/"
+              class="menu-social__link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Facebook
+            </a>
+          </li>
+          <li class="menu-social__item">
+            <a
+              href="https://www.linkedin.com/"
+              class="menu-social__link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Linkedin
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
