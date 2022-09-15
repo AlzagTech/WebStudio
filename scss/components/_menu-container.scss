@@ -88,10 +88,12 @@
 
 .menu-social {
   @extend %list;
-  display: flex;
+  // display: flex;
 }
 
 .menu-social__item {
+  display: inline-block;
+
   &:not(:last-child) {
     margin-right: 10px;
   }

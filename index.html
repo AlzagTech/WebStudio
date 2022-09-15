@@ -117,8 +117,10 @@
                       <use href="./images/icons.svg#icon-check"></use>
                     </svg>
                   </span>
-                  <span class="checkbox__text">Погоджуюся з розсилкою та приймаю </span>
-                  <a href="" class="checkbox__link"> Умови договору</a>
+                  <span class="checkbox__text"
+                    >Погоджуюся з розсилкою та приймаю
+                    <a href="" class="checkbox__link"> Умови договору</a></span
+                  >
                 </label>
                 <button class="modal-form__btn" type="submit">Відправити</button>
               </form>
@@ -177,6 +179,7 @@
           <ul class="about-us__list">
             <li class="about-us__item">
               <img
+                srcset="./images/box1.jpg 1x, ./images/box1-2x.jpg 2x"
                 src="./images/box1.jpg"
                 alt="Робоче місце веб-розробника"
                 width="370"
@@ -189,6 +192,7 @@
             </li>
             <li class="about-us__item">
               <img
+                srcset="./images/box2.jpg 1x, ./images/box2-2x.jpg 2x"
                 src="./images/box2.jpg"
                 alt="Макети розмітки сайту для мобільних телефонів на екрані ноутбука"
                 width="370"
@@ -201,6 +205,7 @@
             </li>
             <li class="about-us__item">
               <img
+                srcset="./images/box3.jpg 1x, ./images/box3-2x.jpg 2x"
                 src="./images/box3.jpg"
                 alt="Палітра кольорів на екрані планшету"
                 width="370"
@@ -220,7 +225,21 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/card1.jpg" alt="Фото чоловіка" class="team__avatar" />
+              <picture>
+                <source
+                  srcset="./images/card1-m.jpg 1x, ./images/card1-m-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/card1-t.jpg 1x, ./images/card1-t-2x.jpg 2x"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/card1-d.jpg 1x, ./images/card1-d-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/card1-m.jpg" alt="Фото чоловіка" class="team__avatar" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>
@@ -277,7 +296,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/card2.jpg" alt="Фото жінки" class="team__avatar" />
+              <picture>
+                <source
+                  srcset="./images/card2-m.jpg 1x, ./images/card2-m-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/card2-t.jpg 1x, ./images/card2-t-2x.jpg 2x"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/card2-d.jpg 1x, ./images/card2-d-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/card2-m.jpg" alt="Фото жінки" class="team__avatar" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -334,7 +367,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/card3.jpg" alt="Фото чоловіка" class="team__avatar" />
+              <picture>
+                <source
+                  srcset="./images/card3-m.jpg 1x, ./images/card3-m-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/card3-t.jpg 1x, ./images/card3-t-2x.jpg 2x"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/card3-d.jpg 1x, ./images/card3-d-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/card3-m.jpg" alt="Фото чоловіка" class="team__avatar" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
@@ -391,7 +438,21 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/card4.jpg" alt="Фото чоловіка" class="team__avatar" />
+              <picture>
+                <source
+                  srcset="./images/card4-m.jpg 1x, ./images/card4-m-2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="./images/card4-t.jpg 1x, ./images/card4-t-2x.jpg 2x"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/card4-d.jpg 1x, ./images/card4-d-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/card4-m.jpg" alt="Фото чоловіка" class="team__avatar" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>
@@ -665,6 +726,12 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,24 +1,77 @@
 .hero {
-  padding: 118px 0;
-  text-align: center;
-
-  max-width: 1600px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  padding: 118px 0;
+
+  text-align: center;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   background-image: linear-gradient(
       to right,
       getColor('overlay-gradient'),
       getColor('overlay-gradient')
     ),
-    url(../images/hero-bg.jpg);
+    url(../images/hero-bg-m.jpg);
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        getColor('overlay-gradient'),
+        getColor('overlay-gradient')
+      ),
+      url(../images/hero-bg-m-2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    background-image: linear-gradient(
+        to right,
+        getColor('overlay-gradient'),
+        getColor('overlay-gradient')
+      ),
+      url(../images/hero-bg-t.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          getColor('overlay-gradient'),
+          getColor('overlay-gradient')
+        ),
+        url(../images/hero-bg-t-2x.jpg);
+    }
+  }
 
   @media screen and (min-width: 1200px) {
+    max-width: 1600px;
     padding: 200px 0;
+    background-image: linear-gradient(
+        to right,
+        getColor('overlay-gradient'),
+        getColor('overlay-gradient')
+      ),
+      url(../images/hero-bg-d.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          getColor('overlay-gradient'),
+          getColor('overlay-gradient')
+        ),
+        url(../images/hero-bg-d-2x.jpg);
+    }
   }
 }
 
@@ -101,18 +154,18 @@
   border-radius: 4px;
   background-color: getColor('primary-white');
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    min-width: 450px;
-    min-height: 609px;
+    width: 450px;
+    height: 609px;
   }
 
   @media screen and (min-width: 1200px) {
-    min-width: 528px;
-    min-height: 581px;
+    width: 528px;
+    height: 581px;
   }
 }
 
